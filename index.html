@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Codex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <h1>Character Codex</h1>
+        <p>Schema-driven character and novel-building workspace.</p>
+      </div>
+
+      <div id="status-banner" class="status-banner hidden" role="status" aria-live="polite"></div>
+
+      <section class="sidebar-card">
+        <div class="section-row">
+          <h2>Roster</h2>
+          <button id="new-character-btn" class="btn small">+ New</button>
+        </div>
+        <div id="character-list" class="character-list"></div>
+      </section>
+
+      <section class="sidebar-card">
+        <h2>Import / Export</h2>
+        <div class="button-stack">
+          <button id="export-all-btn" class="btn success">Download All</button>
+          <label class="file-button">
+            <span>Import Roster</span>
+            <input type="file" id="import-roster-input" accept=".json">
+          </label>
+        </div>
+      </section>
+
+      <section class="sidebar-card">
+        <h2>Auto-Fill from .txt</h2>
+        <p class="helper-text">This is a front-end placeholder extractor that is safe for GitHub Pages. Replace it with a real backend later.</p>
+        <div class="button-stack">
+          <label class="file-button">
+            <span>Select .txt</span>
+            <input type="file" id="memoir-upload" accept=".txt">
+          </label>
+          <div id="loading-indicator" class="loading-indicator hidden">Processing text…</div>
+          <button id="analyze-btn" class="btn warning">Analyze &amp; Fill</button>
+        </div>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <div>
+          <h2 id="editor-title">Select or Create</h2>
+          <p id="editor-subtitle">Pick a character from the roster or make a new one.</p>
+        </div>
+
+        <div id="editor-actions" class="header-actions hidden">
+          <button id="copy-prompt-btn" class="btn">Copy AI Prompt</button>
+          <button id="export-character-btn" class="btn secondary">Download JSON</button>
+          <button id="duplicate-character-btn" class="btn secondary">Duplicate</button>
+          <button id="delete-character-btn" class="btn danger">Delete</button>
+        </div>
+      </header>
+
+      <div id="dynamic-form-container"></div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
