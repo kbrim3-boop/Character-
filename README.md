@@ -1,4 +1,4 @@
-# Character Codex
+**# Character Codex
 
 A GitHub Pages-ready static web app for character building and novel planning.
 
@@ -98,3 +98,4 @@ Each field supports the following structure:
 - Add timeline fields
 - Add export formats for Obsidian / Notion / AI prompt packs
 - Replace `heuristicExtraction()` with a real server-side model call
+**
